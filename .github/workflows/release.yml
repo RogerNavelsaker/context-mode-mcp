@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Validate package metadata
+        run: bun run check
+
+      - name: Build release tarball
+        run: bun run pack
+
+      - name: Resolve tarball path
+        id: tarball
+        run: |
+          set -euo pipefail
+          tarball="$(find dist -maxdepth 1 -type f -name '*.tgz' | head -n 1)"
+          if [ -z "$tarball" ]; then
+            echo "No tarball produced" >&2
+            exit 1
+          fi
+          echo "path=$tarball" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: ${{ steps.tarball.outputs.path }}

@@ -1,0 +1,51 @@
+{
+  "name": "context-mode-mcp",
+  "version": "1.0.51",
+  "private": false,
+  "description": "Bun-installable MCP server package for Context Mode",
+  "license": "Elastic-2.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runtime-intel/context-mode-mcp.git"
+  },
+  "homepage": "https://github.com/runtime-intel/context-mode-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/runtime-intel/context-mode-mcp/issues"
+  },
+  "keywords": [
+    "bun",
+    "mcp",
+    "context-mode",
+    "pi"
+  ],
+  "packageManager": "bun@1.3.10",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "context-mode-mcp": "./bin/context-mode-mcp.mjs"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    ".mcp.json",
+    "scripts"
+  ],
+  "dependencies": {
+    "context-mode": "1.0.51"
+  },
+  "scripts": {
+    "check": "bun --eval \"JSON.parse(await Bun.file('package.json').text()); console.log('package.json ok')\"",
+    "pack": "bun pm pack --destination dist",
+    "publish:dry-run": "bun publish --dry-run",
+    "sync:upstream": "./scripts/sync-from-upstream.sh"
+  },
+  "upstream": {
+    "name": "context-mode",
+    "owner": "mksglu",
+    "repo": "context-mode",
+    "tag": "v1.0.51",
+    "rev": "ff0e0cd200ddc16972bc72c779843330845c0f33"
+  }
+}
