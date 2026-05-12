@@ -1,6 +1,6 @@
 {
   "name": "context-mode-mcp",
-  "version": "1.0.120",
+  "version": "1.0.121",
   "private": false,
   "description": "Bun-installable MCP server package for Context Mode",
   "license": "Elastic-2.0",
@@ -33,7 +33,7 @@
     "scripts"
   ],
   "dependencies": {
-    "context-mode": "1.0.120"
+    "context-mode": "1.0.121"
   },
   "scripts": {
     "check": "bun --eval \"JSON.parse(await Bun.file('package.json').text()); console.log('package.json ok')\"",
@@ -45,7 +45,7 @@
     "name": "context-mode",
     "owner": "mksglu",
     "repo": "context-mode",
-    "tag": "v1.0.120",
-    "rev": "02796227b41b129abba3a5a8d829231e64e996a4"
+    "tag": "v1.0.121",
+    "rev": "b3ee72f5d5569d27388b8232d8971001aeda515c"
   }
 }
