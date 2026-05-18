@@ -5,7 +5,7 @@
     "": {
       "name": "context-mode-mcp",
       "dependencies": {
-        "context-mode": "1.0.135",
+        "context-mode": "1.0.136",
       },
     },
   },
@@ -50,7 +50,7 @@
 
     "content-type": ["content-type@1.0.5", "", {}, "sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA=="],
 
-    "context-mode": ["context-mode@1.0.135", "", { "dependencies": { "@clack/prompts": "^1.0.1", "@mixmark-io/domino": "^2.2.0", "@modelcontextprotocol/sdk": "^1.26.0", "better-sqlite3": "^12.6.2", "picocolors": "^1.1.1", "turndown": "^7.2.0", "turndown-plugin-gfm": "^1.0.2", "zod": "^3.25.0" }, "bin": { "context-mode": "cli.bundle.mjs" } }, "sha512-uSvBV7nYEu6bRnUYrn2s53AbMXKf2uhI3sk5EiPh0gTv0IR6kh63oWPiT9nhiZa2nyr2K0itJeFhlbUKtPpiyQ=="],
+    "context-mode": ["context-mode@1.0.136", "", { "dependencies": { "@clack/prompts": "^1.0.1", "@mixmark-io/domino": "^2.2.0", "@modelcontextprotocol/sdk": "^1.26.0", "better-sqlite3": "^12.6.2", "picocolors": "^1.1.1", "turndown": "^7.2.0", "turndown-plugin-gfm": "^1.0.2", "zod": "^3.25.0" }, "bin": { "context-mode": "cli.bundle.mjs" } }, "sha512-9LKOU5hsHXu5841j5DEQD7+NpEDa5i/kccNK5Dqe6vCn4V4HnnANYKhow1B2yh6SqvyGP23bE4joplvKyyocbA=="],
 
     "cookie": ["cookie@0.7.2", "", {}, "sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w=="],
 
